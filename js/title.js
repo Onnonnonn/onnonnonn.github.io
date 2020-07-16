@@ -1,5 +1,5 @@
 var d;
-constent oTitile = "跨撒小啦"
+oTitile = "跨撒小啦"
 document.addEventListener("visibilitychange", function() {
     document.hidden ? (clearTimeout(d),
         d = setTimeout(function() {
