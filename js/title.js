@@ -1,4 +1,5 @@
 var d;
+constent OriginTitile = document.title;
 document.addEventListener("visibilitychange", function() {
     document.hidden ? (clearTimeout(d),
         d = setTimeout(function() {
