@@ -6,5 +6,5 @@ document.addEventListener("visibilitychange", function() {
         }, 500)) : (document.title = "_(:3\u300d\u300d\u8fd8\u662f\u88ab\u53d1\u73b0\u4e86",
         d = setTimeout(function() {
         document.title = OriginTitile}, 2E3))
-    }
+    })
 console.log('script'); 
