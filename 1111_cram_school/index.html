@@ -1,0 +1,35 @@
+<!Doctyle html>
+<html lang="zh-TW">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <meta name="copyright" content="">
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.js">
+        <!-- tabulator -->
+        <link href="https://unpkg.com/tabulator-tables/dist/css/tabulator.min.css" rel="stylesheet">
+        <script type="text/javascript" src="https://unpkg.com/tabulator-tables/dist/js/tabulator.min.js"></script>
+        <!-- DataTable -->
+        <link href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css" rel="stylesheet">
+        <script type="text/javascript" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    </head>
+    
+    <body>
+        <table id="table"></table>
+        <script>
+            window.onload = function(){
+                $.get("https://script.googleusercontent.com/macros/echo?user_content_key=0QlqaiMaKOuRLmuurbacDa57UGm8uTRvP4gUY4KBBks0M5QmRljpUY1NDoFRW0fhCl8Ai6qw4zlV1aN_lSvpAo9JzKNl08eCm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnICL7hHKN9qmxjdKz-B7h-fZoAe38eSAUffI38gv83MopsTOFc77clmiuTrSdKB506tuVbZLUpAwlxJWfmdYHht_3vPoY_aNk9z9Jw9Md8uu&lib=MOcgXEin8T_3bQwlbbG4SsZGJqi9jSuYg",function(data){
+                    let table_data = data;
+                    //**
+                    $('#table').dataTable( {
+                        "data" : table_data,
+                        "columns" : [{"data":"學校"},{"data":"姓名"},{"data":"登入網址"},{"data":"ID and Password"},{"data":"Realm"},]
+                    });
+                });
+            }
+        </script>
+    </body>
+</html>
