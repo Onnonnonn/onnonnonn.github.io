@@ -21,12 +21,12 @@
         <table id="table"></table>
         <script>
             window.onload = function(){
-                $.get("https://script.googleusercontent.com/macros/echo?user_content_key=0QlqaiMaKOuRLmuurbacDa57UGm8uTRvP4gUY4KBBks0M5QmRljpUY1NDoFRW0fhCl8Ai6qw4zlV1aN_lSvpAo9JzKNl08eCm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnICL7hHKN9qmxjdKz-B7h-fZoAe38eSAUffI38gv83MopsTOFc77clmiuTrSdKB506tuVbZLUpAwlxJWfmdYHht_3vPoY_aNk9z9Jw9Md8uu&lib=MOcgXEin8T_3bQwlbbG4SsZGJqi9jSuYg",function(data){
-                    let table_data = data;
+                $.get("https://script.googleusercontent.com/macros/echo?user_content_key=iGzdt4RN2Rvl7cre3jaSvMHeJI8mpWKZ-PhDsf4C6B_rfM6blliVRxGVUiGcKFF_BXuEVnm6IbcQxqLvkLeMtvdiO1n9038Zm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnNo1fN3O4FIuzldRMaTdyVVVy8dertJTwWy6AKHA6ivmXN6mopOTtcCtk01uR8wdC3DKE6pTJswS63UsYqWdmu8cetw-i6FyFdz9Jw9Md8uu&lib=MOcgXEin8T_3bQwlbbG4SsZGJqi9jSuYg",function(dt){
+                    let table_data = dt;
                     //**
-                    $('#table').dataTable( {
-                        "data" : table_data,
-                        "columns" : [{"data":"學校"},{"data":"姓名"},{"data":"登入網址"},{"data":"ID and Password"},{"data":"Realm"},]
+                    $('#table').DataTable({
+                        data : table_data,
+                        columns : [{title:"學校"},{title:"姓名"},{title:"登入網址"},{title:"ID and Password"},{title:"Realm"}],
                     });
                 });
             }
